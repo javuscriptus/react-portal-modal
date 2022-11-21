@@ -1,8 +1,8 @@
 import { Modal } from './components';
-import useModal from './hooks/useModal';
+import useModal from './hooks/useToggle';
 
 const App = () => {
-  const { isOpenModal, handleModal } = useModal();
+  const [isOpenModal, handleModal] = useModal(false);
 
   return (
     <>
