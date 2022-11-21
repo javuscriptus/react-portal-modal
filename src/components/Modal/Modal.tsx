@@ -16,7 +16,7 @@ export function Modal({ children, isOpen, onClose }: ModalProps) {
 
   return createPortal(
     <div>
-      <div className={styles.overlay}></div>
+      <div role="presentation" className={styles.overlay} onMouseUp={onClose}></div>
       <div className={styles.modal}>
         <div>
           <IoClose className={styles['close-button']} onClick={onClose} />
