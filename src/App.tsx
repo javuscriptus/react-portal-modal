@@ -1,4 +1,4 @@
-import { Modal } from './components';
+import { Modal, SimpleAnimatedModal } from './components';
 import useModal from './hooks/useToggle';
 
 const App = () => {
@@ -7,9 +7,9 @@ const App = () => {
   return (
     <>
       <button onClick={handleModal}>{isOpenModal ? 'Закрыть' : 'Открыть'}</button>
-      <Modal isOpen={isOpenModal} onClose={handleModal}>
-        Modal
-      </Modal>
+      <SimpleAnimatedModal isOpened={isOpenModal} onClose={handleModal}>
+        Привет
+      </SimpleAnimatedModal>
     </>
   );
 };
